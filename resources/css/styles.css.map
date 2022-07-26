@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK,CACD,gBAAgB,CAAE,GAAG,CACrB,SAAS,CAAE,IAAI",
+"sources": ["../sass/pages/_home.scss"],
+"names": [],
+"file": "styles.css"
+}
