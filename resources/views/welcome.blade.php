@@ -1,3 +1,3 @@
 <x-ciento-once-layout>
-    hola
+    @livewire('home-tabs')
 </x-ciento-once-layout>

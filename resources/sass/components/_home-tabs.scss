@@ -1,0 +1,259 @@
+#reseaux_sociaux {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ACCORDEON RESEAUX SOCIAUX */
+
+.accordeon {
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+}
+
+/* Taille des onglets fermés */
+.accordeon .link {
+    position: relative;
+    float: left;
+    width: 10%;
+    height: 100%;
+    color: #aaa;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.accordeon .link.w-link {
+    width: 33.33%;
+}
+
+.accordeon .link:last-child {
+    border-right: 0;
+}
+
+/* Taille des onglets ouverts */
+.accordeon .link.hovered {
+    width: 80%;
+    background-color: $white;
+    .column_servicios {
+        width: 10%;
+    }
+    .prev {
+        width: 12%;
+        cursor: initial;
+    }
+}
+
+.accordeon .link:not(.hovered) .full_content {
+    opacity: 0;
+}
+
+.accordeon .link .full_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100vh;
+    padding-left: 12%;
+    overflow-y: scroll;
+}
+
+.accordeon .link .full_content img {
+    width: 50px;
+}
+
+.accordeon .link .prev {
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+
+.accordeon .link .prev>span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.accordeon {
+    .link img {
+        max-width: unset;
+    }
+
+    /* columnas*/
+    .column_servicios {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background: rgb(217, 26, 77);
+        background: linear-gradient(78deg, rgba(217, 26, 77, 1) 0%, rgba(217, 26, 171, 1) 99.67%);
+    }
+
+    .column_trabajos {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background: rgb(157, 244, 129);
+        background: linear-gradient(79deg, rgba(157, 244, 129, 1) 0%, rgba(235, 255, 2, 1) 99.67%);
+    }
+
+    .column_Equipo {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background: rgb(65, 197, 243);
+        background: linear-gradient(14deg, rgba(65, 197, 243, 1) 0%, rgba(23, 243, 200, 1) 99.67%);
+    }
+
+    /*Decoraciones*/
+    .svg_cerebro {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+    }
+
+    .svg_cerebro img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 3;
+    }
+
+    .svg_puntos {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 50%;
+    }
+
+    .svg_puntos img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 3;
+    }
+
+    .svg_circulo {
+        position: absolute;
+        top: -170px;
+        right: -90px;
+        height: 100%;
+    }
+
+    .svg_circulo img {
+        position: absolute;
+        top: -170px;
+        right: -90px;
+        height: 100%;
+        z-index: 3;
+    }
+
+    /* textura */
+    .texture_servicio {
+        position: absolute;
+        top: 0;
+        right: 0;
+        mix-blend-mode: overlay;
+        height: 100%;
+    }
+
+    .texture_servicio img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .texture_trabajos {
+        position: absolute;
+        top: 0;
+        right: 0;
+        mix-blend-mode: overlay;
+        height: 100%;
+    }
+
+    .texture_trabajos img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .texture_equipos {
+        position: absolute;
+        top: 0;
+        right: 0;
+        mix-blend-mode: overlay;
+        height: 100%;
+    }
+
+    .texture_equipos img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 0;
+    }
+
+    /*Titulos*/
+    h2 {
+        font-size: 50px;
+        font-family: $font_regular;
+    }
+
+    .title_servicios {
+        z-index: 1;
+        color: #F596A8;
+    }
+
+    .title_trabajos {
+        z-index: 1;
+        color: #41C5F3;
+    }
+
+    .title_equipos {
+        z-index: 1;
+        color: #D91A5E;
+    }
+}
+
+/*boton hey*/
+.wrape_hey {
+    position: fixed;
+    width: 90px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    bottom: 10px;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 3px;
+}
+
+.icon_hey {
+    cursor: pointer;
+}
+
+.text_hey h3 {
+    color: #EC6FA6;
+    font-family: "fedoka-regular";
+}
