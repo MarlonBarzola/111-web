@@ -18,10 +18,13 @@
     </head>
     <body>
         <div>
+            @livewire('loading')
             {{ $slot }}
         </div>
 
         @livewireScripts
+
+        <script src="{{ asset('js/gsap.min.js') }}"></script>
 
         @stack('js')
 
