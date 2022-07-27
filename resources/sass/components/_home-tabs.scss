@@ -81,7 +81,9 @@
     .link .prev img {
         max-width: unset;
     }
-
+    h2 {
+        transition: .3s all;
+    }
     /* columnas*/
     .column_servicios {
         display: flex;
@@ -116,9 +118,10 @@
     /*Decoraciones*/
     .svg_cerebro {
         position: absolute;
-        top: 0;
+        top: -40px;
         left: 0;
         height: 50%;
+        transition: .3s;
     }
 
     .svg_cerebro img {
@@ -131,9 +134,10 @@
 
     .svg_puntos {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -40px;
+        right: 20px;
         height: 50%;
+        transition: .3s;
     }
 
     .svg_puntos img {
@@ -146,9 +150,10 @@
 
     .svg_circulo {
         position: absolute;
-        top: -170px;
+        top: -200px;
         right: -90px;
         height: 100%;
+        transition: .3s;
     }
 
     .svg_circulo img {
@@ -182,6 +187,7 @@
         right: 0;
         mix-blend-mode: overlay;
         height: 100%;
+        transition: .3s;
     }
 
     .texture_trabajos img {
@@ -206,6 +212,34 @@
         right: 0;
         height: 100%;
         z-index: 0;
+    }
+
+    .column_servicios:hover {
+        .svg_cerebro {
+            top: 0;
+        }
+    }
+    .column_trabajos:hover {
+        .svg_puntos {
+            top: 0;
+        }
+    }
+    .column_Equipo:hover {
+        .svg_circulo {
+            top: -170px;
+        }
+    }
+    .texture {
+        right: -20px;
+        transition: .3s;
+    }
+    .link:hover {
+        .texture {
+            right: 0;
+        }
+        h2 {
+            transform: scale(1.1);
+        }
     }
 
     /*Titulos*/
