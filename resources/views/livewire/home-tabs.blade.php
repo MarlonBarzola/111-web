@@ -58,13 +58,17 @@
 </div>
 
 @push('js')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        $(".accordeon .link").click(function() {
-            $(".accordeon .link").removeClass("hovered");
-            $(".accordeon .link").removeClass("w-link");
-            $(this).addClass("hovered");
+        let links = document.querySelectorAll('.link');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                let all_links = document.querySelectorAll('.link');
+                all_links.forEach(element => {
+                    element.classList.remove('hovered');
+                    element.classList.remove('w-link');
+                });
+                link.classList.add('hovered');
+            });
         });
     </script>
 @endpush
