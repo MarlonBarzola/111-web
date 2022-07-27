@@ -50,8 +50,7 @@
             </div>
             <div class="full_content">
                 <div class="full">
-                    <div class="f1">Facebook</div>
-                    <div class="f2">some additional info to this link</div>
+                    @livewire('teams')
                 </div>
             </div>
         </div>
