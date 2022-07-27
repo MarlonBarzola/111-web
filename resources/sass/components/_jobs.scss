@@ -1,0 +1,84 @@
+.reel {
+    margin-bottom: 30px;
+}
+.jobs-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    li {
+        cursor: pointer;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        width: calc((100% / 3) - 20px);
+        position: relative;
+        overflow: hidden;
+        &:nth-child(3n + 1) {
+            margin-left: 0;
+        }
+        &::before {
+            content: '';
+            background-image: url(../images/trabajos/textura-trabajo.png);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 50;
+        }
+        .bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-image: url(../images/trabajos/bg-trabajo.jpg);
+            width: 100%;
+            height: 100%;
+            transition: 1s all;
+        }
+        &:hover {
+            .bg {
+                opacity: 0;
+                //transform: translate(0, 100%);
+            }
+        }
+        svg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            polygon {
+                fill:#d91a4d;
+                opacity:0.6;
+            }
+        }
+        .tag {
+            color: $white;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            gap: 7px;
+            position: absolute;
+            text-transform: uppercase;
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+            span {
+                border-radius: 100%;
+                background-color: $white;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+    $colors: #f2cb05, #ae1ad9, #1790bf, #d91a4d, #b6d936, #a65d03, #17f3c8;
+    $repeat: 10;  // How often you want the pattern to repeat.
+    // Warning: a higher number outputs more CSS.
+
+    @for $i from 1 through $repeat {
+        li:nth-child(#{length($colors)}n+#{$i}) {
+            svg polygon {
+                fill: lighten(nth($colors, random(length($colors))), 20%);;
+            }
+        }
+    }
+}

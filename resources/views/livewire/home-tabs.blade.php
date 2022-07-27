@@ -31,10 +31,8 @@
                 </div>
             </div>
             <div class="full_content">
-                
                 <div class="full">
-                    <div class="f1">Youtube</div>
-                    <div class="f2">some additional info to this link</div>
+                    @livewire('jobs')
                 </div>
             </div>
         </div>
