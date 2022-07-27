@@ -2,7 +2,7 @@
     <div class="loading">
         <div class="wrapper">
             <div class="logo">
-                <img src="images/111-logo.png" alt="111 Studio">
+                <img src="images/111-studio.png" alt="111 Studio">
             </div>
 
             <div class="we_can_do">
