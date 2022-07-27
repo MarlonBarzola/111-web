@@ -81,8 +81,10 @@
     .link .prev img {
         max-width: unset;
     }
-    h2 {
-        transition: .3s all;
+    .title {
+        h2 {
+            transition: .3s all;
+        }
     }
     /* columnas*/
     .column_servicios {
@@ -237,8 +239,10 @@
         .texture {
             right: 0;
         }
-        h2 {
-            transform: scale(1.1);
+        .title {
+            h2 {
+                transform: scale(1.1);
+            }
         }
     }
 

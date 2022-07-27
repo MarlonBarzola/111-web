@@ -2,7 +2,7 @@
     <div class="accordeon">
         <div class="link w-link">
             <div class="prev column_servicios">
-                <div class="title_servicios">
+                <div class="title title_servicios">
                     <h2>SERVICIOS</h2>
                 </div>
                 <div class="svg_cerebro">
@@ -20,7 +20,7 @@
         </div>
         <div class="link w-link">
             <div class="prev column_trabajos">
-                <div class="title_trabajos">
+                <div class="title title_trabajos">
                     <h2>TRABAJOS</h2>
                 </div>
                 <div class="svg_puntos">
@@ -38,7 +38,7 @@
         </div>
         <div class="link w-link last-link">
             <div class="prev column_Equipo">
-                <div class="title_equipos">
+                <div class="title title_equipos">
                     <h2>EQUIPO</h2>
                 </div>
                 <div class="svg_circulo">
