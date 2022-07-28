@@ -38,7 +38,7 @@
                     ease: "expo.inOut",
                     delay: 0.5
                     });
-                    tl.to(".loading", {
+                    tl.to("#loader", {
                         display: "none"
                     });
                 }, 2500);

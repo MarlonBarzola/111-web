@@ -15,29 +15,24 @@
         &:nth-child(3n + 1) {
             margin-left: 0;
         }
-        &::before {
-            content: '';
-            background-image: url(../images/trabajos/textura-trabajo.png);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 50;
-        }
-        .bg {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-image: url(../images/trabajos/bg-trabajo.jpg);
-            width: 100%;
-            height: 100%;
-            transition: 1s all;
+        .triangle {
+            position: relative;
+            transform: translate(100%);
+            transition: .3s;
+            &::before {
+                content: '';
+                background-image: url(../images/trabajos/textura-trabajo.png);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 50;
+            }
         }
         &:hover {
-            .bg {
-                opacity: 0;
-                //transform: translate(0, 100%);
+            .triangle {
+                transform: translate(0);
             }
         }
         svg {
@@ -47,7 +42,7 @@
             z-index: 10;
             polygon {
                 fill:#d91a4d;
-                opacity:0.6;
+                opacity:0.7;
             }
         }
         .tag {
