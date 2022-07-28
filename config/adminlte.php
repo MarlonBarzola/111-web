@@ -289,12 +289,12 @@ return [
         ['header' => 'OPCIONES DE TRABAJOS'],
         [
             'text'       => 'Lista de trabajos',
-            'route'        => 'admin',
+            'route'        => 'admin.jobs.index',
             'icon' => 'fas fa-fw fa-clipboard',
         ],
         [
             'text'       => 'Crear nuevo trabajo',
-            'route'        => 'admin',
+            'route'        => 'admin.jobs.create',
             'icon' => 'fas fa-fw fa-file',
         ],
         /* ['header' => 'labels'],

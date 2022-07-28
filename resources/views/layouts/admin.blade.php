@@ -11,10 +11,12 @@
 @stop
 
 @section('css')
+    @livewireStyles
     @stack('css')
 @stop
 
 @section('js')
+    @livewireScripts
     <script src="{{ asset('vendor/sweetalert/sweetalert.all.js')  }}"></script>
     @stack('scripts')
 @stop
