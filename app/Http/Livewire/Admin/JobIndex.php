@@ -22,6 +22,7 @@ class JobIndex extends Component
     public function render()
     {
         $jobs = Job::where('name', 'LIKE', '%' . $this->search . '%')
+                    ->where('status', Job::PUBLISH)
                     ->latest()
                     ->paginate(10);
         return view('livewire.admin.job-index', compact('jobs'));

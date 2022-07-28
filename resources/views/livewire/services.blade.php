@@ -25,8 +25,8 @@
         </ul>
     </div>
     <div class="wrapper_video">
-        <video width="710" height="550" controls="Play" poster="images/portada.png">
-            <source src="images/video.mp4" type="video/mp4">
+        <video width="710" height="550" controls="Play" poster="{{ asset("images/portada.png") }}">
+            <source src="{{ asset("images/video.mp4") }}" type="video/mp4">
         </video>
     </div>
     <div class="title_cliente">

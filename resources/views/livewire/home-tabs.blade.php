@@ -1,6 +1,11 @@
 <div id="reseaux_sociaux">
     <div class="accordeon">
-        <div class="link w-link">
+        
+        <div class="link
+        @if (request()->routeIs('/'))
+        w-link
+        @endif
+        ">
             <div class="prev column_servicios">
                 <div class="title title_servicios">
                     <h2>SERVICIOS</h2>
@@ -18,7 +23,15 @@
                 </div>
             </div>
         </div>
-        <div class="link w-link">
+
+        <div class="link
+        @if (request()->routeIs('/'))
+        w-link
+        @endif
+        @if (request()->routeIs('jobs.show'))
+        hovered
+        @endif
+        ">
             <div class="prev column_trabajos">
                 <div class="title title_trabajos">
                     <h2>TRABAJOS</h2>
@@ -32,11 +45,22 @@
             </div>
             <div class="full_content">
                 <div class="full">
-                    @livewire('jobs')
+
+                    @if($job)
+                        <x-show-job :job="$job" />
+                    @else
+                        @livewire('jobs')
+                    @endif
+                    
                 </div>
             </div>
         </div>
-        <div class="link w-link last-link">
+
+        <div class="link
+        @if (request()->routeIs('/'))
+        w-link
+        @endif
+        ">
             <div class="prev column_Equipo">
                 <div class="title title_equipos">
                     <h2>EQUIPO</h2>

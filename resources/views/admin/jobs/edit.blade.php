@@ -41,7 +41,7 @@
 
     @push('scripts')
         <script src="{{ asset('vendor/jquery-string-to-slug/jquery.stringToSlug.min.js') }}"></script>
-        <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
+        <script src="{{ asset('vendor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
 
         <script>
             $(document).ready( function() {
@@ -52,10 +52,15 @@
                 });
             });
             ClassicEditor
-                .create( document.querySelector( '#body' ) )
-                .catch( error => {
-                    console.error( error );
-            } );
+                .create(document.querySelector('#body'), {
+                    simpleUpload: {
+                        // The URL that the images are uploaded to.
+                        uploadUrl: "{{route('admin.image.upload')}}",
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                });
             
             function init() {
                 var inputFile = document.getElementById('picture');

@@ -18,12 +18,12 @@
             @enderror
 
         </div>
-        <p>Selecciona una imagen de portada</p>
+        <p>Selecciona una imagen de banner</p>
     </div>
 </div>
 
 <div class="form-group">
-    {!! Form::label('name', 'Nombre') !!}
+    {!! Form::label('name', 'Título') !!}
     {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre del post', 'autocomplete' => 'off']) !!}
 
     @error('name')

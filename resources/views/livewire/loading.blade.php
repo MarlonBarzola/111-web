@@ -2,7 +2,7 @@
     <div class="loading">
         <div class="wrapper">
             <div class="logo">
-                <img src="images/111-studio.png" alt="111 Studio">
+                <img src="{{ asset("images/111-studio.png") }}" alt="111 Studio">
             </div>
 
             <div class="we_can_do">

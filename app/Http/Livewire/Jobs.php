@@ -2,12 +2,14 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Job;
 use Livewire\Component;
 
 class Jobs extends Component
 {
     public function render()
     {
-        return view('livewire.jobs');
+        $jobs = Job::all();
+        return view('livewire.jobs', compact('jobs'));
     }
 }
