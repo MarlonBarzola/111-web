@@ -255,14 +255,25 @@ return [
         ], */
         ['header' => 'ADMINISTRADOR'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Categorías',
+            'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/categories*'],
+            'submenu' => [
+                [
+                    'text' => 'Ver categorías',
+                    'route'  => 'admin.categories.index',
+                ],
+                [
+                    'text' => 'Añadir categoría',
+                    'route'  => 'admin.categories.create',
+                ],
+            ],
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Etiquetas',
+            'route'  => 'admin.tags.index',
+            'icon' => 'far fa-fw fa-bookmark',
+            'active' => ['admin/tags*'],
         ],
         [
             'text'    => 'multilevel',
