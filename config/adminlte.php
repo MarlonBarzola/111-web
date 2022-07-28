@@ -255,11 +255,6 @@ return [
         ], */
         ['header' => 'ADMINISTRADOR'],
         [
-            'text' => 'Trabajos',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-briefcase',
-        ],
-        [
             'text' => 'profile',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
@@ -306,6 +301,17 @@ return [
                     'url'  => '#',
                 ],
             ],
+        ],
+        ['header' => 'OPCIONES DE TRABAJOS'],
+        [
+            'text'       => 'Lista de trabajos',
+            'route'        => 'admin',
+            'icon' => 'fas fa-fw fa-clipboard',
+        ],
+        [
+            'text'       => 'Crear nuevo trabajo',
+            'route'        => 'admin',
+            'icon' => 'fas fa-fw fa-file',
         ],
         /* ['header' => 'labels'],
         [
