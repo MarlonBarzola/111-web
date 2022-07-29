@@ -1,9 +1,9 @@
-@props(['job'])
-
 <article class="content show-job">
 
-    <div class="return">
-        <x-icon-left wire:click="$emit('jobPage')" />
+    <div class="return" wire:click="showPage('trabajos')">
+        <span title="Regresar">
+            <x-icon-left />
+        </span>
     </div>
 
     <div class="banner">

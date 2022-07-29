@@ -1,3 +1,13 @@
+.return {
+    display: inline-block;
+    svg {
+        cursor: pointer;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 30px;
+    }
+}
+
 .banner {
     margin-bottom: 30px;
     position: relative;

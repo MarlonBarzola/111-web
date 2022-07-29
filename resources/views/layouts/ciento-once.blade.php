@@ -18,7 +18,7 @@
     </head>
     <body>
         <div>
-           @livewire('loading')
+           {{-- @livewire('loading') --}}
             {{ $slot }}
         </div>
 

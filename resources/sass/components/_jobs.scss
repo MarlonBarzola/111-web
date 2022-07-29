@@ -1,3 +1,31 @@
+.search {
+    text-align: right;
+    margin-bottom: 30px;
+    label {
+        display: inline-block;
+        position: relative;
+    }
+    input[type="search"] {
+        border-color: $gray;
+        border-radius: 30px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 20px;
+        padding-right: 30px;
+        &:focus {
+            --tw-ring-color: $gray;
+            box-shadow: unset;
+        }
+    }
+    svg {
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
 .reel {
     margin-bottom: 30px;
 }

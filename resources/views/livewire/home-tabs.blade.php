@@ -1,12 +1,8 @@
 <div id="reseaux_sociaux">
     <div class="accordeon">
-        
-        <div class="link
-        @if (request()->routeIs('/'))
-        w-link
-        @endif
-        ">
-            <div class="prev column_servicios">
+        {{-- {{$search}} --}}
+        <div class="link {{$service_active}}">
+            <div class="prev column_servicios" wire:click="searchPage('servicios')">
                 <div class="title title_servicios">
                     <h2>SERVICIOS</h2>
                 </div>
@@ -24,15 +20,8 @@
             </div>
         </div>
 
-        <div class="link
-        @if (request()->routeIs('/'))
-        w-link
-        @endif
-        @if (request()->routeIs('jobs.show'))
-        hovered
-        @endif
-        ">
-            <div class="prev column_trabajos">
+        <div class="link {{ $jobs_active }}">
+            <div class="prev column_trabajos" wire:click="searchPage('trabajos')">
                 <div class="title title_trabajos">
                     <h2>TRABAJOS</h2>
                 </div>
@@ -47,7 +36,7 @@
                 <div class="full">
 
                     @if($job)
-                        <x-show-job :job="$job" />
+                        @livewire('job-show', ['job' => $job])
                     @else
                         @livewire('jobs')
                     @endif
@@ -56,12 +45,8 @@
             </div>
         </div>
 
-        <div class="link
-        @if (request()->routeIs('/'))
-        w-link
-        @endif
-        ">
-            <div class="prev column_Equipo">
+        <div class="link {{ $team_active }}">
+            <div class="prev column_Equipo" wire:click="searchPage('equipo')">
                 <div class="title title_equipos">
                     <h2>EQUIPO</h2>
                 </div>
@@ -81,7 +66,7 @@
     </div>
 </div>
 
-@push('js')
+{{-- @push('js')
     <script>
         let links = document.querySelectorAll('.link');
         links.forEach(link => {
@@ -95,4 +80,4 @@
             });
         });
     </script>
-@endpush
+@endpush --}}
