@@ -41,20 +41,20 @@ class HomeTabs extends Component
 
     public function activateLinks($query) {
         if($query == 'servicios') {
-            $this->service_active = 'hovered';
-            $this->jobs_active = '';
-            $this->team_active = '';
+            $this->service_active = 'rotation hovered';
+            $this->jobs_active = 'rotation ';
+            $this->team_active = 'rotation ';
         }
         if($query == 'trabajos') {
-            $this->service_active = '';
-            $this->jobs_active = 'hovered';
-            $this->team_active = '';
+            $this->service_active = 'rotation ';
+            $this->jobs_active = 'rotation hovered';
+            $this->team_active = 'rotation ';
             $this->reset('job');;
         }
         if($query == 'equipo') {
-            $this->service_active = '';
-            $this->jobs_active = '';
-            $this->team_active = 'hovered';
+            $this->service_active = 'rotation ';
+            $this->jobs_active = 'rotation ';
+            $this->team_active = 'rotation hovered';
         }
     }
 

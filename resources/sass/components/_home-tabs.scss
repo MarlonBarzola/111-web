@@ -16,7 +16,7 @@
 .accordeon .link {
     position: relative;
     float: left;
-    width: 10%;
+    width: 6%;
     height: 100%;
     color: #aaa;
     overflow: hidden;
@@ -33,7 +33,7 @@
 
 /* Taille des onglets ouverts */
 .accordeon .link.hovered {
-    width: 80%;
+    width: 88%;
     background-color: $white;
     transition: .55s all;
     .column_servicios {
@@ -83,6 +83,7 @@
     }
     .title {
         h2 {
+            font-family: $font_semibold;
             transition: .3s all;
         }
     }
@@ -242,6 +243,25 @@
         .title {
             h2 {
                 transform: scale(1.1);
+            }
+        }
+    }
+    .link.rotation {
+        .title {
+            position: absolute;
+            bottom: 120px;
+            transform: rotate(-90deg);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            h2 {
+                transform: unset;
+                font-size: 40px;
+            }
+            .icon {
+                height: 30px;
+                width: 30px;
+                transform: rotate(90deg);
             }
         }
     }
