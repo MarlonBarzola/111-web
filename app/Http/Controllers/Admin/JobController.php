@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\JobRequest;
 use App\Models\Category;
 use App\Models\Job;
 use App\Models\Tag;
@@ -40,7 +41,7 @@ class JobController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(JobRequest $request)
     {
         $job = Job::create($request->all());
 

@@ -12,7 +12,7 @@
     {!! Form::label('position', 'Cargo') !!}
     {!! Form::text('position', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el cargo del nuevo miembro']) !!}
 
-    @error('name')
+    @error('position')
         <small class="text-danger">{{ $message }}</small>
     @enderror
 

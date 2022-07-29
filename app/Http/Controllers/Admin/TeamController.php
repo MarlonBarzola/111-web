@@ -38,6 +38,14 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'name' => 'required',
+            'position' => 'required',
+            'slug' => 'required|unique:teams',
+            'file' => 'image|required' 
+        ]);
+
         $team = Team::create($request->all());
 
         if($request->file('file')) {
@@ -80,6 +88,14 @@ class TeamController extends Controller
      */
     public function update(Request $request, Team $team)
     {
+
+        $request->validate([
+            'name' => 'required',
+            'position' => 'required',
+            'slug' => "required|unique:teams,slug,$team->id",
+            'file' => 'image' 
+        ]);
+
         $team->update($request->all());
 
         if($request->file('file')) {
