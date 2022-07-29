@@ -3,42 +3,20 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Laravel\Jetstream\Events\TeamCreated;
-use Laravel\Jetstream\Events\TeamDeleted;
-use Laravel\Jetstream\Events\TeamUpdated;
-use Laravel\Jetstream\Team as JetstreamTeam;
+use Illuminate\Database\Eloquent\Model;
 
-class Team extends JetstreamTeam
+class Team extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'personal_team' => 'boolean',
-    ];
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
-    protected $fillable = [
-        'name',
-        'personal_team',
-    ];
+    const DRAFT = 0;
+    const PUBLISH = 1;
 
-    /**
-     * The event map for the model.
-     *
-     * @var array
-     */
-    protected $dispatchesEvents = [
-        'created' => TeamCreated::class,
-        'updated' => TeamUpdated::class,
-        'deleted' => TeamDeleted::class,
-    ];
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
 }

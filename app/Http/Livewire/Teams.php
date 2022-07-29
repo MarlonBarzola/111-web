@@ -2,12 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Team;
 use Livewire\Component;
 
 class Teams extends Component
 {
     public function render()
     {
-        return view('livewire.teams');
+
+        $teams = Team::orderBy('id', 'desc')->get();
+
+        return view('livewire.teams', compact('teams'));
     }
 }

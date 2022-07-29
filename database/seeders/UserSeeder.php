@@ -21,10 +21,5 @@ class UserSeeder extends Seeder
             'email' => 'marlon@111.com.ec',
             'password' => Hash::make('marlon123')
         ]);
-        Team::create([
-            'user_id' => $user->id,
-            'name' => "Marlon's Team",
-            'personal_team' => 1
-        ]);
     }
 }

@@ -297,6 +297,19 @@ return [
             'route'        => 'admin.jobs.create',
             'icon' => 'fas fa-fw fa-file',
         ],
+
+        ['header' => 'OPCIONES DE EQUIPO'],
+        [
+            'text'       => 'Lista de equipo',
+            'route'        => 'admin.teams.index',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text'       => 'Crear nuevo miembro',
+            'route'        => 'admin.teams.create',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
         /* ['header' => 'labels'],
         [
             'text'       => 'important',

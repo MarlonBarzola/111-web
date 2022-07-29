@@ -4,60 +4,17 @@
     </div>
 
     <ul class="team">
-        <li>
-            <figure>
-                <img src="{{ asset('images/equipo/equipo.jpg') }}" alt="Equipo">
-            </figure>
-            <div class="data">
-                <h2>Nombre Apellido</h2>
-                <span>Cargo</span>
-            </div>
-        </li>
-        <li>
-            <figure>
-                <img src="{{ asset('images/equipo/equipo.jpg') }}" alt="Equipo">
-            </figure>
-            <div class="data">
-                <h2>Nombre Apellido</h2>
-                <span>Cargo</span>
-            </div>
-        </li>
-        <li>
-            <figure>
-                <img src="{{ asset('images/equipo/equipo.jpg') }}" alt="Equipo">
-            </figure>
-            <div class="data">
-                <h2>Nombre Apellido</h2>
-                <span>Cargo</span>
-            </div>
-        </li>
-        <li>
-            <figure>
-                <img src="{{ asset('images/equipo/equipo.jpg') }}" alt="Equipo">
-            </figure>
-            <div class="data">
-                <h2>Nombre Apellido</h2>
-                <span>Cargo</span>
-            </div>
-        </li>
-        <li>
-            <figure>
-                <img src="{{ asset('images/equipo/equipo.jpg') }}" alt="Equipo">
-            </figure>
-            <div class="data">
-                <h2>Nombre Apellido</h2>
-                <span>Cargo</span>
-            </div>
-        </li>
-        <li>
-            <figure>
-                <img src="{{ asset('images/equipo/equipo.jpg') }}" alt="Equipo">
-            </figure>
-            <div class="data">
-                <h2>Nombre Apellido</h2>
-                <span>Cargo</span>
-            </div>
-        </li>
+        @foreach ($teams as $team)
+            <li>
+                <figure>
+                    <img src="{{ Storage::url($team->thumbnail) }}" alt="{{ $team->name }}">
+                </figure>
+                <div class="data">
+                    <h2>{{ $team->name }}</h2>
+                    <span>{{ $team->position }}</span>
+                </div>
+            </li>
+        @endforeach
     </ul>
 
 </div>
