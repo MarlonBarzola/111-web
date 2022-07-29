@@ -64,7 +64,7 @@
             
             function init() {
                 var inputFile = document.getElementById('picture');
-                inputFile.addEventListener('change', mostrarImagen, false);
+                if(inputFile) inputFile.addEventListener('change', mostrarImagen, false);
             }
 
             function mostrarImagen(event) {
