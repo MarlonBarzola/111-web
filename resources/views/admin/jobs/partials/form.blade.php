@@ -111,7 +111,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('extract', 'Extracto') !!}
+    {!! Form::label('extract', 'Texto banner') !!}
     {!! Form::textarea('extract', null, ['class' => 'form-control', 'rows' => 5]) !!}
 
     @error('extract')

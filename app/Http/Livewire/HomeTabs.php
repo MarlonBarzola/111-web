@@ -21,7 +21,7 @@ class HomeTabs extends Component
     public $jobs_active = 'w-link';
     public $team_active = 'w-link';
 
-    protected $listeners = ['showJob', 'listenPage'];
+    protected $listeners = ['showJob', 'listenPage', 'goHome', 'resetJob'];
 
     public bool $loadData = false;
 
@@ -56,7 +56,7 @@ class HomeTabs extends Component
             $this->service_active = 'rotation ';
             $this->jobs_active = 'rotation hovered';
             $this->team_active = 'rotation ';
-            $this->reset('job');;
+            $this->reset('job');
         }
         if($query == 'equipo') {
             $this->service_active = 'rotation ';
@@ -71,7 +71,19 @@ class HomeTabs extends Component
     }
 
     public function listenPage($page) {
-        $this->activateLinks($page);
+        $this->searchPage($page);
+    }
+
+    public function resetHome() {
+        $this->reset('service_active', 'jobs_active', 'team_active', 'pagina', 'trabajo');
+    }
+
+    public function resetJob() {
+        $this->reset('trabajo');
+    }
+
+    public function goHome() {
+        $this->resetHome();
     }
 
     public function render()

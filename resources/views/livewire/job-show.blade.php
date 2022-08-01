@@ -1,11 +1,14 @@
 <article class="content show-job">
 
-    <div class="return" wire:click="showPage('trabajos')">
-        <span title="Regresar">
-            <x-icon-left />
-        </span>
+    <div class="flex justify-between">
+        <div class="return" wire:click="showPage('trabajos')">
+            <span title="Regresar">
+                <x-icon-left />
+            </span>
+        </div>
+        @livewire('open-menu')
     </div>
-
+    
     <div class="banner">
         <div class="header">
             <h2>{{ $job->extract }}</h2>

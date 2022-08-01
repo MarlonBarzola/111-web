@@ -6,7 +6,7 @@
                 <div class="prev column_servicios" wire:click="searchPage('servicios')">
                     <div class="title title_servicios">
                         <h2>SERVICIOS</h2>
-                        @if ($pagina)
+                        @if ($pagina && $service_active != 'w-link')
                             <div class="icon">
                                 @if ($pagina == 'servicios')
                                     <x-icon-minus />
@@ -34,7 +34,7 @@
                 <div class="prev column_trabajos" wire:click="searchPage('trabajos')">
                     <div class="title title_trabajos">
                         <h2>TRABAJOS</h2>
-                        @if ($pagina)
+                        @if ($pagina && $jobs_active != 'w-link')
                             <div class="icon">
                                 @if ($pagina == 'trabajos')
                                     <x-icon-minus />
@@ -53,7 +53,6 @@
                 </div>
                 <div class="full_content">
                     <div class="full">
-
                         @if($job)
                             @livewire('job-show', ['job' => $job])
                         @else
@@ -68,7 +67,7 @@
                 <div class="prev column_Equipo" wire:click="searchPage('equipo')">
                     <div class="title title_equipos">
                         <h2>EQUIPO</h2>
-                        @if ($pagina)
+                        @if ($pagina && $team_active != 'w-link')
                             <div class="icon">
                                 @if ($pagina == 'equipo')
                                     <x-icon-minus />

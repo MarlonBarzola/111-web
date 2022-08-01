@@ -1,4 +1,7 @@
 <div class="wrapper_services">
+    <div class="content text-right">
+        @livewire('open-menu')
+    </div>
     <div class="wrapper_text">
         <p class="encabezado_services">
             En un entorno de comunicación.

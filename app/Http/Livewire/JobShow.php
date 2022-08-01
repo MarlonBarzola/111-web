@@ -11,6 +11,7 @@ class JobShow extends Component
 
     public function showPage($page) {
         $this->emit('listenPage', $page);
+        $this->emit('resetJob');
     }
 
     public function render()

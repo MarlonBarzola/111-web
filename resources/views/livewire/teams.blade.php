@@ -1,4 +1,7 @@
 <div class="content">
+    <div class="text-right">
+        @livewire('open-menu')
+    </div>
     <div class="reel">
         <img src="{{ asset('images/trabajos/reel-trabajos.jpg') }}" alt="Tranajos 111">
     </div>

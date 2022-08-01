@@ -5,6 +5,7 @@
             <input type="search" wire:model="search">
             <x-icon-search />
         </label>
+        @livewire('open-menu')
     </div>
 
     <div class="reel">
