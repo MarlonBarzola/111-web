@@ -15,7 +15,7 @@
             @csrf
             <div class="title_form">
                 <h2 class="title1">Hey,</h2>
-                <h2 class="title2">¡qué bueno verte aqui!</h2>
+                <h2 class="title2">¡qué bueno verte aquí!</h2>
             </div>
             @if (!$sended)
                 <div>
