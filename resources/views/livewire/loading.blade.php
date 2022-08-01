@@ -1,18 +1,23 @@
-<div id="loader">
-    <div class="loading">
-        <div class="wrapper">
-            <div class="logo">
-                <img src="{{ asset("images/111-studio.png") }}" alt="111 Studio">
-            </div>
+<div>
+    @if ($loader)
+        <div id="loader">
+            <div class="loading">
+                <div class="wrapper">
+                    <div class="logo">
+                        <img src="{{ asset("images/111-studio.png") }}" alt="111 Studio">
+                    </div>
 
-            <div class="we_can_do">
-                <x-we-can-do />
+                    <div class="we_can_do">
+                        <x-we-can-do />
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </div>  
+    @endif
 </div>
 
 @push('js')
+    <script src="{{ asset('js/gsap.min.js') }}"></script>
     <script>
         document.onreadystatechange = function() {
             let tl = gsap.timeline();
@@ -44,8 +49,10 @@
                     tl.to("#loader", {
                         display: "none"
                     });
+                    setTimeout(() => {
+                        Livewire.emit('hideLoader');
+                    }, 1000);
                 }, 3200);
-                
             }
         };
     </script>
