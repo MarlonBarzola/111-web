@@ -23,6 +23,13 @@ class HomeTabs extends Component
 
     protected $listeners = ['showJob', 'listenPage'];
 
+    public bool $loadData = false;
+
+    public function init()
+    {
+        $this->loadData = true;
+    }
+
     public function mount() {
         $this->activateLinks($this->pagina);
         if($this->trabajo != '') {

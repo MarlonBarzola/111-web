@@ -19,6 +19,9 @@
             if (document.readyState !== "complete") {
                 document.querySelector("body").style.visibility = "hidden";
                 document.querySelector("#loader").style.visibility = "visible";
+                tl.to('.loading .wrapper', {
+                    opacity: 1
+                });
                 tl.from(".logo img", {
                     duration: 1,
                     y: 200
@@ -41,7 +44,7 @@
                     tl.to("#loader", {
                         display: "none"
                     });
-                }, 2500);
+                }, 3200);
                 
             }
         };
