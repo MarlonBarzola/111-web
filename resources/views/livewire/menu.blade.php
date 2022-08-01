@@ -20,7 +20,7 @@
         <a href="#" class="element_menu" wire:click.prevent="menuFunction('servicios')">SERVICIOS</a>
         <a href="#" class="element_menu" wire:click.prevent="menuFunction('trabajos')">PORTAFOLIO</a>
         <a href="#" class="element_menu" wire:click.prevent="menuFunction('equipo')">EQUIPO</a>
-        <a href="#" class="element_menu" wire:click.prevent="menuFunction">INSTAGRAM</a>
+        <a href="https://www.instagram.com/111studio/" target="_blank" class="element_menu" wire:click="closeMenu">INSTAGRAM</a>
     </div>
     <div class="menu_frase">
         <x-icon-we-can-do />
