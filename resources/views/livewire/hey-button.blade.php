@@ -1,30 +1,61 @@
-<div>
+<div x-data="{ open: false }">
     <div class="wrapper_hey">
-        <button class="boton_hey" onclick="openModal()">
+        <button class="boton_hey" x-on:click="open = !open">
             <x-icon-mano />
         </button>
         <div class="text_hey">
             <h3>Hey!</h3>
         </div>
     </div>
-    <div class="modal" id="modalForm">
-        <form action="" class="form_modal">
+    <div class="modal" id="modalForm" x-bind:class="open ? 'open' : ''">
+
+        <div class="close_modal" @click="open = false"></div>
+
+        <form class="form_modal" wire:submit.prevent="submit">
+            @csrf
             <div class="title_form">
                 <h2 class="title1">Hey,</h2>
                 <h2 class="title2">¡qué bueno verte aqui!</h2>
             </div>
-            <div class="input_email">
-                <input type="email" name="correo" id="correo" placeholder="Tu correo electrónico">
-            </div>
-            <div class="input_nombre_telefono">
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                <input type="text" name="telefono" id="telefono" placeholder="Teléfono">
-            </div>
-            <div class="input_coment">
-                <input type="text" name="comentario" id="comentario" placeholder="Cuéntanos quién eres y lo que necesitas">
-            </div>
+            @if (!$sended)
+                <div>
+                    <div class="input_email">
+                        <input type="email" placeholder="Tu correo electrónico" wire:model.defer="email">
+                        @error('email')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="input_nombre_telefono">
+                        <label>
+                            <input type="text" placeholder="Nombre" wire:model.defer="name">
+                            @error('name')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </label>
+
+                        <label>
+                            <input type="text" placeholder="Teléfono" wire:model.defer="phone">
+                            @error('phone')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </label>
+
+                    </div>
+                    <div class="input_coment">
+                        <textarea cols="30" rows="3" placeholder="Cuéntanos quién eres y lo que necesitas" wire:model.defer="body"></textarea>
+                        @error('body')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+            @else
+                <p>¡Tu mensaje se envió correctamente!</p>
+            @endif
+
             <div class="input_submit_info1">
-                <input type="submit" id="submitBtn" value="ENVIAR">
+                @if (!$sended)
+                    <input type="submit" id="submitBtn" value="ENVIAR" wire:loading.attr="disabled">
+                @endif
                 <div class="wrapper_info">
                     <p><a href="mailto:info@111.com.ec">info@111.com.ec</a></p>
                     <p>+(593)46024136</p>
@@ -47,24 +78,3 @@
         </form>
     </div>
 </div>
-
-@push('js')
-    <script>
-        const modalForm = document.querySelector('#modalForm');
-
-        const openModal = () => {
-            modalForm.style.display = 'flex';
-            modalForm.style.animation="none"
-        }
-
-        const closeModal = () => {
-            modalForm.style.display = "none";
-        }
-
-        modalForm.onclick = (e) =>{
-            if(e.target == modalForm){
-                closeModal();
-            }
-        }
-    </script>
-@endpush
