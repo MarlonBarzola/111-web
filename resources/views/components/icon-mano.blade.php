@@ -1,0 +1,7 @@
+<svg id="fb8cbccd-5728-4c39-81e1-e2e1a4cc7217" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.09 35.21">
+    <path d="M14.85,19.08l-4.24-8.32a2.67,2.67,0,0,0-.9-1,2.29,2.29,0,0,0-.56-.29,2.32,2.32,0,0,0-1.86.09,2.5,2.5,0,0,0-1,3.39l4.24,8.32" transform="translate(-4.58 -3.52)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:1.60444104671478px" />
+    <path d="M23.42,14.7l-3.56-7-.68-1.33a2.68,2.68,0,0,0-1.45-1.31,2.34,2.34,0,0,0-1.87.1,2.39,2.39,0,0,0-1.26,2.1,2.66,2.66,0,0,0,.3,1.3l4.23,8.31" transform="translate(-4.58 -3.52)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:1.60444104671478px" />
+    <path d="M25.06,17.92,20.45,8.87a2.58,2.58,0,1,1,4.6-2.34l3,5.83" transform="translate(-4.58 -3.52)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:1.60444104671478px" />
+    <path d="M20.77,20.1,14.31,7.43l-.84-1.66A2.71,2.71,0,0,0,12,4.47a2.32,2.32,0,0,0-1.86.1A2.5,2.5,0,0,0,9.18,8L10,9.6l6.47,12.69" transform="translate(-4.58 -3.52)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:1.60444104671478px" />
+    <path d="M28,12.36,33.8,23.69A9.78,9.78,0,0,1,20.92,37h0L7,31.51a2.59,2.59,0,0,1-1.45-3.35,2.62,2.62,0,0,1,1.23-1.35,2.57,2.57,0,0,1,2.12-.1l5.55,2.19-3.89-7.64" transform="translate(-4.58 -3.52)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:1.60444104671478px" />
+</svg>

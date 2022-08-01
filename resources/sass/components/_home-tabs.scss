@@ -287,26 +287,3 @@
         color: #D91A5E;
     }
 }
-
-/*boton hey*/
-.wrape_hey {
-    position: fixed;
-    width: 90px;
-    height: 80px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    bottom: 10px;
-    align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 3px;
-}
-
-.icon_hey {
-    cursor: pointer;
-}
-
-.text_hey h3 {
-    color: #EC6FA6;
-    font-family: "fedoka-regular";
-}

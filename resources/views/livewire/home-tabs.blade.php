@@ -93,6 +93,9 @@
             </div>
         </div>
     @endif
+
+    @livewire('hey-button')
+
 </div>
 
 {{-- @push('js')
