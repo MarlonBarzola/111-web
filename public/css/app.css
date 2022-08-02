@@ -1507,9 +1507,6 @@ select {
 .flex-wrap {
   flex-wrap: wrap;
 }
-.content-between {
-  align-content: space-between;
-}
 .items-center {
   align-items: center;
 }

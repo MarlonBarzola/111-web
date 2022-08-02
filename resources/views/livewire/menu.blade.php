@@ -1,4 +1,4 @@
-<div class="container_menu {{$open_menu}}" id="menu">
+<div class="container_menu {{ $open_menu }}" id="menu">
     <div class="icon_exit" wire:click="closeMenu">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0"
@@ -16,11 +16,29 @@
         <x-icon-111 />
     </div>
     <div class="menu_elements">
-        <a href="#" class="element_menu" wire:click.prevent="resetPage">HOME</a>
-        <a href="#" class="element_menu" wire:click.prevent="menuFunction('servicios')">SERVICIOS</a>
-        <a href="#" class="element_menu" wire:click.prevent="menuFunction('trabajos')">PORTAFOLIO</a>
-        <a href="#" class="element_menu" wire:click.prevent="menuFunction('equipo')">EQUIPO</a>
-        <a href="https://www.instagram.com/111studio/" target="_blank" class="element_menu" wire:click="closeMenu">INSTAGRAM</a>
+        <a href="#" class="element_menu
+            @if ($currentLink == 'home') active @endif"
+            wire:click.prevent="resetPage">
+            HOME
+        </a>
+        <a href="#" class="element_menu
+            @if ($currentLink == 'servicios') active @endif"
+            wire:click.prevent="menuFunction('servicios')">
+            SERVICIOS
+        </a>
+        <a href="#" class="element_menu
+            @if ($currentLink == 'trabajos') active 
+            @endif"
+            wire:click.prevent="menuFunction('trabajos')">
+            PORTAFOLIO
+        </a>
+        <a href="#" class="element_menu
+        @if ($currentLink == 'equipo') active @endif"
+            wire:click.prevent="menuFunction('equipo')">
+            EQUIPO
+        </a>
+        <a href="https://www.instagram.com/111studio/" target="_blank" class="element_menu"
+            wire:click="closeMenu">INSTAGRAM</a>
     </div>
     <div class="menu_frase">
         <x-icon-we-can-do />

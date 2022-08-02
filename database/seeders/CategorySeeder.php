@@ -15,16 +15,40 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
-            'name' => 'Categoría 1',
-            'slug' => 'categoria-1'
+            'name' => 'Web',
+            'slug' => 'web'
         ]);
         Category::create([
-            'name' => 'Categoría 2',
-            'slug' => 'categoria-2'
+            'name' => 'Folletería',
+            'slug' => 'folleteria'
         ]);
         Category::create([
-            'name' => 'Categoría 3',
-            'slug' => 'categoria-3'
+            'name' => 'Branding',
+            'slug' => 'branding'
+        ]);
+        Category::create([
+            'name' => 'Social Media',
+            'slug' => 'social-media'
+        ]);
+        Category::create([
+            'name' => 'Ilustración',
+            'slug' => 'ilustracion'
+        ]);
+        Category::create([
+            'name' => 'Estrategia',
+            'slug' => 'estrategia'
+        ]);
+        Category::create([
+            'name' => 'Soluciones Digitales',
+            'slug' => 'soluciones-digitales'
+        ]);
+        Category::create([
+            'name' => 'Pauta Digital',
+            'slug' => 'pauta-digital'
+        ]);
+        Category::create([
+            'name' => 'Packaging',
+            'slug' => 'packaging'
         ]);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Category;
 use App\Models\Job;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
@@ -10,14 +11,25 @@ class Jobs extends Component
 {
 
     public $search = '';
+    public $jobs;
+
+    protected $listeners = ['searchJob'];
 
     public function emitJob($job_id) {
         $this->emit('showJob', $job_id);
     }
 
+    public function category($slug) {
+        $this->search = $slug;
+    }
+
+    public function searchJob($value) {
+        $this->search = $value;
+    }
+
     public function render()
     {
-        $jobs = Job::where([
+        $this->jobs = Job::where([
                         ['name', 'LIKE', '%' . $this->search . '%'],
                         ['status', Job::PUBLISH]
                     ])
@@ -28,6 +40,6 @@ class Jobs extends Component
                         ]);
                     })
                     ->orderBy('id', 'desc')->get();
-        return view('livewire.jobs', compact('jobs'));
+        return view('livewire.jobs');
     }
 }

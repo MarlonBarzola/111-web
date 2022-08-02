@@ -14,17 +14,11 @@
             y sabemos cómo hacerlo.
         </p>
         <ul class="list_Servicios">
-            <li class="elemnt_list_servicio">WEB</li>
-            <li class="elemnt_list_servicio">FOLLETERÍA</li>
-            <li class="elemnt_list_servicio">BRANDING</li>
-            <li class="elemnt_list_servicio">SOCIAL MEDIA</li>
-            <li class="elemnt_list_servicio">ILUSTRACIÓN</li>
-        </ul>
-        <ul class="list_Servicios">
-            <li class="elemnt_list_servicio">ESTRATEGIA</li>
-            <li class="elemnt_list_servicio">SOLUCIONES DIGITALES</li>
-            <li class="elemnt_list_servicio">PAUTA DIGITAL</li>
-            <li class="elemnt_list_servicio">PACKAGING</li>
+            @foreach ($categories as $category)
+                <li class="elemnt_list_servicio" wire:click="goJobs('{{ $category->name }}')">
+                    {{ $category->name }}
+                </li>
+            @endforeach
         </ul>
     </div>
     <div class="wrapper_video">

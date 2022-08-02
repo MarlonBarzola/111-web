@@ -8,8 +8,9 @@ class Menu extends Component
 {
 
     public $open_menu = '';
+    public $currentLink;
 
-    protected $listeners = ['openMenu', 'closeMenu'];
+    protected $listeners = ['openMenu', 'closeMenu', 'activateLinks'];
 
     public function openMenu() {
         $this->open_menu = 'open_menu';
@@ -23,11 +24,16 @@ class Menu extends Component
         $this->emit('listenPage', $value);
         $this->emit('resetJob');
         $this->closeMenu();
+        $this->currentLink = $value;
     }
 
     public function resetPage() {
         $this->closeMenu();
         $this->emit('goHome');
+    }
+
+    public function activateLinks($value) {
+        $this->currentLink = $value;
     }
 
     public function render()

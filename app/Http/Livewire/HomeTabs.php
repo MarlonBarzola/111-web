@@ -44,6 +44,7 @@ class HomeTabs extends Component
         if($this->pagina != 'trabajos') {
             $this->trabajo = '';
         }
+        $this->emit('activateLinks', $value);
     }
 
     public function activateLinks($query) {
@@ -70,12 +71,16 @@ class HomeTabs extends Component
         $this->trabajo = $this->job->slug;
     }
 
-    public function listenPage($page) {
+    public function listenPage($page, $search = '') {
         $this->searchPage($page);
+        if($search != '') {
+            $this->emit('searchJob', $search);
+        }
     }
 
     public function resetHome() {
         $this->reset('service_active', 'jobs_active', 'team_active', 'pagina', 'trabajo');
+        $this->emit('activateLinks', 'home');
     }
 
     public function resetJob() {

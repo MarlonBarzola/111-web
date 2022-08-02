@@ -16,11 +16,12 @@
         <ul class="jobs-list">
                 @foreach ($jobs as $job)
                     <li>
-                        {{-- <a href="{{ route('jobs.show', $job) }}"> --}}
                         <a href="{{ URL::to('/'); }}/?search={{ $job->slug }}" wire:click.prevent="emitJob({{$job->id}})">
                             <div class="triangle">
                                 <x-triangulo />
-                                <h2 class="tag">{{ $job->category->name }}<span></span></h2>
+                                <a href="#" class="tag" wire:click.prevent="category('{{ $job->category->name }}')">
+                                    <h2>{{ $job->category->name }}<span></span></h2>
+                                </a>
                             </div>
                             <img src="{{ Storage::url($job->thumbnail) }}" alt="{{ $job->name }}">
                         </a>
