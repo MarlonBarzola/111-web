@@ -288,26 +288,36 @@ return [
         
         ['header' => 'OPCIONES DE TRABAJOS'],
         [
-            'text'       => 'Lista de trabajos',
-            'route'        => 'admin.jobs.index',
+            'text' => 'Trabajos',
             'icon' => 'fas fa-fw fa-clipboard',
-        ],
-        [
-            'text'       => 'Crear nuevo trabajo',
-            'route'        => 'admin.jobs.create',
-            'icon' => 'fas fa-fw fa-file',
+            'active' => ['admin/jobs*'],
+            'submenu' => [
+                [
+                    'text'       => 'Lista de trabajos',
+                    'route'        => 'admin.jobs.index',
+                ],
+                [
+                    'text'       => 'Crear nuevo trabajo',
+                    'route'        => 'admin.jobs.create',
+                ],
+            ],
         ],
 
         ['header' => 'OPCIONES DE EQUIPO'],
         [
-            'text'       => 'Lista de equipo',
-            'route'        => 'admin.teams.index',
-            'icon' => 'fas fa-fw fa-users',
-        ],
-        [
-            'text'       => 'Crear nuevo miembro',
-            'route'        => 'admin.teams.create',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Equipo',
+            'icon' => 'fas fa-fw fa-briefcase',
+            'active' => ['admin/teams*'],
+            'submenu' => [
+                [
+                    'text'       => 'Lista de equipo',
+                    'route'        => 'admin.teams.index',
+                ],
+                [
+                    'text'       => 'Crear nuevo miembro',
+                    'route'        => 'admin.teams.create',
+                ],
+            ],
         ],
 
         ['header' => 'OPCIONES DE USUARIOS'],

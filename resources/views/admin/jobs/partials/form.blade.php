@@ -1,4 +1,4 @@
-{!! Form::hidden('user_id', auth()->user()->id) !!}
+{{-- {!! Form::hidden('user_id', auth()->user()->id) !!} --}}
 
 <div class="row mb-3">
     <div class="col">

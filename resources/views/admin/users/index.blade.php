@@ -59,7 +59,7 @@
                 console.log(formId)
                 Swal.fire({
                     title: '¡Atención!',
-                    text: "Esta acción eliminará a todos los trabajos asociados a este usuario, ¿deseas continuar?",
+                    text: "Esta acción eliminará permanentemente a este usuario, ¿deseas continuar?",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',

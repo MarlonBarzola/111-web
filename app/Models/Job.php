@@ -15,9 +15,9 @@ class Job extends Model
     const PUBLISH = 1;
 
      //Relacion uno a muchos inversa
-     public function user() {
+    /* public function user() {
         return $this->belongsTo(User::class);
-    }
+    } */
 
     public function category() {
         return $this->belongsTo(Category::class);

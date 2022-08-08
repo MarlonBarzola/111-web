@@ -11,6 +11,7 @@
 @stop
 
 @section('css')
+    <link rel="shortcut icon" href="{{ asset('images/111-icon.jpg') }}" type="image/x-icon">
     @livewireStyles
     @stack('css')
 @stop

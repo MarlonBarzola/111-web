@@ -60,8 +60,8 @@ class User extends Authenticatable
     ];
 
     //Relacion uno a muchos
-    public function jobs() {
+    /* public function jobs() {
         return $this->hasMany(Job::class);
-    }
+    } */
 
 }

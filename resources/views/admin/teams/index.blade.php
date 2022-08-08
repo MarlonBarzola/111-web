@@ -13,6 +13,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Cargo</th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>
@@ -21,6 +22,7 @@
                         <tr>
                             <td>{{ $team->id }}</td>
                             <td>{{ $team->name }}</td>
+                            <td>{{ $team->position }}</td>
 
                             <td width="10px">
                                 <a class="btn btn-primary btn-sm" href="{{ route('admin.teams.edit', $team) }}">Editar</a>
