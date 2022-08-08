@@ -28,6 +28,8 @@ class HomeTabs extends Component
     public function init()
     {
         $this->loadData = true;
+        $this->emit('activateLinks', $this->pagina);
+        $this->emit('changeOgProperty', $this->pagina);
     }
 
     public function mount() {
@@ -45,6 +47,7 @@ class HomeTabs extends Component
             $this->trabajo = '';
         }
         $this->emit('activateLinks', $value);
+        $this->emit('changeOgProperty', $value);
     }
 
     public function activateLinks($query) {
@@ -81,6 +84,7 @@ class HomeTabs extends Component
     public function resetHome() {
         $this->reset('service_active', 'jobs_active', 'team_active', 'pagina', 'trabajo');
         $this->emit('activateLinks', 'home');
+        $this->emit('changeOgProperty', null);
     }
 
     public function resetJob() {
