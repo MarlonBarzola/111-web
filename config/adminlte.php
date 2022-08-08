@@ -310,6 +310,18 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
 
+        ['header' => 'OPCIONES DE USUARIOS'],
+        [
+            'text'       => 'Lista de usuarios',
+            'route'        => 'admin.users.index',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text'       => 'Crear nuevo usuario',
+            'route'        => 'admin.users.create',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
         /* ['header' => 'labels'],
         [
             'text'       => 'important',
