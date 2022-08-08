@@ -332,6 +332,13 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
 
+        ['header' => 'MENSAJES'],
+        [
+            'text'       => 'Bandeja de entrada',
+            'icon_color' => 'cyan',
+            'route'        => 'admin.messages.index',
+        ],
+
         /* ['header' => 'labels'],
         [
             'text'       => 'important',
