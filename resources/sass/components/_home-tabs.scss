@@ -36,9 +36,11 @@
     width: 88%;
     background-color: $white;
     transition: .55s all;
+
     .column_servicios {
         width: 10%;
     }
+
     .prev {
         width: 12.5%;
     }
@@ -81,12 +83,14 @@
     .link .prev img {
         max-width: unset;
     }
+
     .title {
         h2 {
             font-family: $font_semibold;
             transition: .3s all;
         }
     }
+
     /* columnas*/
     .column_servicios {
         display: flex;
@@ -222,30 +226,36 @@
             top: 0;
         }
     }
+
     .column_trabajos:hover {
         .svg_puntos {
             top: 0;
         }
     }
+
     .column_Equipo:hover {
         .svg_circulo {
             top: -170px;
         }
     }
+
     .texture {
         right: -20px;
         transition: .3s;
     }
+
     .link:hover {
         .texture {
             right: 0;
         }
+
         .title {
             h2 {
                 transform: scale(1.1);
             }
         }
     }
+
     .link.rotation {
         .title {
             position: absolute;
@@ -254,10 +264,12 @@
             display: flex;
             align-items: center;
             gap: 15px;
+
             h2 {
                 transform: unset;
                 font-size: 40px;
             }
+
             .icon {
                 height: 30px;
                 width: 30px;
@@ -285,5 +297,24 @@
     .title_equipos {
         z-index: 1;
         color: #D91A5E;
+    }
+}
+
+@media only screen and (max-width:760px) {
+    .accordeon {
+        .svg_cerebro {
+            height: 35%;
+        }
+
+        .svg_puntos {
+            height: 35%;
+        }
+
+        .title{
+            display: flex;
+            position: absolute;
+            transform: rotate(-90deg);
+            align-items: center;
+        }
     }
 }
