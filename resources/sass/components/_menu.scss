@@ -92,3 +92,37 @@
     height: 30px;
     width: 30px;
 }
+
+@media only screen and (max-width:760px) {
+    .container_menu{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap:55px
+    }
+
+    .menu_logo svg{
+        width: 100px;
+    }
+
+    .element_menu{
+        font-size: 25px;
+    }
+
+    .menu_frase svg{
+        width: 300px;
+    }
+
+    .icon_exit{
+        top: 50px;
+        right: 40px;
+        svg{
+            height: 25px;
+            width: 25px;
+        }
+    }
+    .icon_open svg{
+        height:25px;
+        width:25px;
+    }
+}
