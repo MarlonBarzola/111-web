@@ -40,3 +40,15 @@
         }
     }
 }
+
+@media only screen and (orientation:landscape) {
+    .loading{
+        .logo{
+            width:15%;
+        }
+
+        .we_can_do{
+            width:45%;
+        }
+    }
+}

@@ -285,6 +285,8 @@ input:-moz-placeholder, textarea::-webkit-input-placeholder { /* Firefox 18- */
     opacity: 1;
 }
 
+// Responsive-vertical 
+
 @media only screen and (max-width:760px){
     .form_modal {
         padding: 40px 30px 40px 30px;
