@@ -63,3 +63,27 @@
         text-transform: uppercase;
     }
 }
+
+@media only screen and(max-width:760px) {
+    .return {
+        svg {
+            height: 25px;
+            width: 25px;
+        }
+    }
+
+    .banner {
+        h2 {
+            font-size: 27px;
+        }
+    }
+
+    .show-job {
+        h1 {
+            text-align: center;
+        }
+        p {
+           text-align: justify;
+        }
+    }
+}

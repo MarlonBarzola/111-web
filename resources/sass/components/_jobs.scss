@@ -113,3 +113,19 @@
         }
     }
 }
+
+@media only screen and (max-width:760px) {
+    .jobs-list {
+        li {
+            cursor: pointer;
+            margin-bottom: 30px;
+            margin-left: 0px;
+            width:100%;
+        
+        .triangle {
+            position: relative;
+            transform: translate(0%);
+        }
+    }
+    }
+}

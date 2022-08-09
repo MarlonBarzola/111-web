@@ -61,14 +61,80 @@
     font-size: 15px;
     font-weight: bold;
 }
-
-#wrapper_clientes_logos{
+.wrapper_logos{
     display: flex;
+    width: 100%;
     justify-content: center;
-    margin-bottom: 200px ;
+    padding-bottom: 85px;
 }
 
-#wrapper_clientes_logos img{
-    width:550px;
+.contenedor_logos{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: flex-end;
+    width:100vw;
+    padding: 0px 450px;
+    column-gap: 30px;
+    row-gap: 18px;
 }
 
+
+.logo_cliente{
+    width: 100px;
+
+}
+
+@media only screen and (max-width:760px) {
+    .wrapper_text{
+        margin: 0 30px 0 30px ;
+    }
+
+    .encabezado_services{
+        font-size: 0.80rem;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+
+    .list_Servicios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:10px;
+        width: 80%;
+        .elemnt_list_servicio{
+            font-size: 13px;
+        }
+    }
+
+    .wrapper_video{
+        width: 100%;
+        height: 250px;
+    }
+
+    .title_cliente{
+        display: flex;
+        margin:0px;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contenedor_logos{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-items: flex-end;
+        width:100vw;
+        padding: 0px 450px;
+        column-gap: 30px;
+        row-gap: 18px;
+    }
+    
+    
+    .logo_cliente{
+        width: 70px;
+    
+    }
+}
