@@ -28,3 +28,15 @@
         width: 70%;
     }
 }
+
+@media only screen and (max-width:760px){
+    .loading{
+        .logo{
+            width:40%;
+        }
+
+        .we_can_do{
+            width:80%;
+        }
+    }
+}
