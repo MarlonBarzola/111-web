@@ -320,6 +320,23 @@ return [
             ],
         ],
 
+        ['header' => 'OPCIONES DE CLIENTES'],
+        [
+            'text' => 'Clientes',
+            'icon' => 'fas fa-fw fa-copyright',
+            'active' => ['admin/customers*'],
+            'submenu' => [
+                [
+                    'text'       => 'Lista de clientes',
+                    'route'        => 'admin.customers.index',
+                ],
+                [
+                    'text'       => 'Crear nuevo cliente',
+                    'route'        => 'admin.customers.create',
+                ],
+            ],
+        ],
+
         ['header' => 'OPCIONES DE USUARIOS'],
         [
             'text'       => 'Lista de usuarios',

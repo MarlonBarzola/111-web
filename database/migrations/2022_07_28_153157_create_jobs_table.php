@@ -21,6 +21,7 @@ class CreateJobsTable extends Migration
             $table->string('slug');
             $table->text('extract')->nullable();
             $table->longText('body')->nullable();
+            $table->text('iframe')->nullable();
             $table->string('thumbnail')->nullable();
             $table->string('banner')->nullable();
 

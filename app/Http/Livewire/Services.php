@@ -3,12 +3,19 @@
 namespace App\Http\Livewire;
 
 use App\Models\Category;
+use App\Models\Customer;
 use Livewire\Component;
 
 class Services extends Component
 {
 
     public $categories;
+    public $customers;
+
+    public function mount() {
+        $this->categories = Category::all();
+        $this->customers = Customer::all();
+    }
 
     public function goJobs($value) {
         $this->emit('listenPage', 'trabajos', $value);
@@ -16,9 +23,6 @@ class Services extends Component
 
     public function render()
     {
-
-        $this->categories = Category::all();
-
         return view('livewire.services');
     }
 }

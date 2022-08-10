@@ -127,5 +127,13 @@
     @error('body')
         <small class="text-danger">{{$message}}</small>
     @enderror
+</div>
 
+<div class="form-group">
+    {!! Form::label('iframe', 'Embeber iframe') !!}
+    {!! Form::text('iframe', null, ['class' => 'form-control']) !!}
+
+    @error('iframe')
+        <small class="text-danger">{{$message}}</small>
+    @enderror
 </div>
