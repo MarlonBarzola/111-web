@@ -131,7 +131,7 @@
 
 <div class="form-group">
     {!! Form::label('iframe', 'Embeber iframe') !!}
-    {!! Form::text('iframe', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('iframe', null, ['class' => 'form-control']) !!}
 
     @error('iframe')
         <small class="text-danger">{{$message}}</small>
