@@ -11,7 +11,7 @@
     
     <div class="banner">
         <div class="header">
-            <h2>{{ $job->extract }}</h2>
+            <h2>{{ $job->name }}</h2>
             <h3>{{ $job->category->name }}</h3>
         </div>
         <img src="{{ Storage::url($job->banner) }}" alt="{{ $job->name }}">

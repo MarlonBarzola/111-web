@@ -73,8 +73,8 @@
     grid-template-columns: repeat(4,1fr);
     justify-content: center;
     align-items: flex-end;
-    width:100vw;
-    padding: 0px 450px;
+    max-width: 55%;
+    margin: auto;
     column-gap: 30px;
     row-gap: 18px;
 }
@@ -127,9 +127,9 @@
         justify-content: center;
         align-items: flex-end;
         width:100vw;
-        padding: 0px 450px;
         column-gap: 30px;
         row-gap: 18px;
+        max-width: 70%;
     }
     
     
