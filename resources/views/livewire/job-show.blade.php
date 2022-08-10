@@ -17,17 +17,15 @@
         <img src="{{ Storage::url($job->banner) }}" alt="{{ $job->name }}">
     </div>
 
-    <figure class="thumbnail">
-        <img src="{{ Storage::url($job->thumbnail) }}" alt="{{ $job->name }}">
-    </figure>
-
     <div class="job-content">
         <h1>{{ $job->name }}</h1>
         {!! $job->body !!}
     </div>
 
     @if ($job->iframe)
-        {!! $job->iframe !!}
+        <div class="iframes">
+            {!! $job->iframe !!}
+        </div>
     @endif
 
 </article>
