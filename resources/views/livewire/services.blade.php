@@ -1,7 +1,3 @@
-@push('css')
-    <link rel="stylesheet" href="{{ asset('vendor/slick/slick.css') }}">
-@endpush
-
 <div class="wrapper_services">
     <div class="content text-right">
         @livewire('open-menu')
