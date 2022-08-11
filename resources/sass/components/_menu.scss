@@ -93,7 +93,7 @@
     width: 30px;
 }
 
-@media only screen and (max-width:760px) {
+@media only screen and (max-width:560px) {
     .container_menu{
         display: flex;
         justify-content: center;
@@ -128,7 +128,8 @@
 }
 
 //Responsive landscape
-@media only screen and (orientation:landscape) {
+@media only screen and (orientation:landscape)and (min-device-width: 560px) 
+and (max-device-width: 930px)  {
     .container_menu{
         display: flex;
         justify-content: center;

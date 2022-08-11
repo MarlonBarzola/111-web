@@ -114,7 +114,7 @@
     }
 }
 
-@media only screen and (max-width:760px) {
+@media only screen and (max-width:560px) {
     .jobs-list {
         li {
             cursor: pointer;
@@ -129,3 +129,15 @@
     }
     }
 }
+
+@media only screen and (orientation:landscape)and (min-device-width: 560px) 
+        and (max-device-width: 930px){
+            .jobs-list {
+                li{
+                    .triangle {
+                        position: relative;
+                        transform: translate(0%);
+                    }
+                }
+            }
+    }

@@ -306,7 +306,7 @@
     }
 }
 
-@media only screen and (max-width:760px) {
+@media only screen and (max-width:560px) {
     .accordeon {
         .svg_cerebro {
             height: 35%;
@@ -327,4 +327,18 @@
             align-items: center;
         }
     }
+}
+
+@media only screen and (orientation:landscape)and (min-device-width: 560px) 
+and (max-device-width: 930px) {
+    .accordeon {
+        h2 {
+            font-size: 34px;
+        }
+
+        .svg_circulo {
+            top: -10px;
+        }
+    }
+    
 }
