@@ -1,5 +1,5 @@
-<div id="reseaux_sociaux" wire:init="init">
-    @if ($loadData)
+<div id="reseaux_sociaux" wire:init="init" style="opacity: @if ($loadData) 1 @else 0 @endif">
+
         <div class="accordeon">
             {{-- {{$search}} --}}
             <div class="link {{$service_active}}">
@@ -91,24 +91,8 @@
                 </div>
             </div>
         </div>
-    @endif
 
     @livewire('hey-button')
 
 </div>
 
-{{-- @push('js')
-    <script>
-        let links = document.querySelectorAll('.link');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                let all_links = document.querySelectorAll('.link');
-                all_links.forEach(element => {
-                    element.classList.remove('hovered');
-                    element.classList.remove('w-link');
-                });
-                link.classList.add('hovered');
-            });
-        });
-    </script>
-@endpush --}}

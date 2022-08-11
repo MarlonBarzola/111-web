@@ -1,14 +1,14 @@
-.wrapper_text{
+.wrapper_text {
     display: flex;
     flex-direction: column;
-    text-align: center ;
-    margin: 0 150px 0 150px ;
+    text-align: center;
+    margin: 0 150px 0 150px;
 }
 
-.encabezado_services{
+.encabezado_services {
     font-family: $font_regular;
     font-size: 1rem;
-    color:#000000;
+    color: #000000;
     line-height: 3;
     text-transform: none;
     text-align: center;
@@ -16,29 +16,31 @@
     line-height: 1.8;
 }
 
-.list_Servicios{
+.list_Servicios {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:30px;
+    gap: 30px;
     padding-top: 10px;
     flex-wrap: wrap;
     width: 70%;
     margin: auto;
-    .elemnt_list_servicio{
+
+    .elemnt_list_servicio {
         cursor: pointer;
-        color:#000000;
+        color: #000000;
         font-size: 15px;
         text-transform: uppercase;
         border-radius: 30px;
         padding: 5px 12px;
+
         &:hover {
             background-color: #ccc;
         }
     }
 }
 
-.wrapper_video{
+.wrapper_video {
     display: flex;
     justify-content: center;
     margin-top: 40px;
@@ -47,94 +49,189 @@
     height: 400px;
 }
 
-.wrapper_video video{
+.wrapper_video video {
     justify-content: center;
 }
 
 
-.title_cliente{
-    margin: 50px 150px 50px 150px ;
+.title_cliente {
+    margin: 50px 150px 50px 150px;
 }
 
-.title_cliente h2{
-    color:#000000;
+.title_cliente h2 {
+    color: #000000;
     font-size: 15px;
     font-weight: bold;
 }
-.wrapper_logos{
+
+.wrapper_logos {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding-bottom: 85px;
+    padding-bottom: 125px;
 }
 
-.contenedor_logos{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
+.contenedor_logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: flex-end;
-    max-width: 55%;
+    width: 55%;
     margin: auto;
     column-gap: 30px;
     row-gap: 18px;
 }
 
 
-.logo_cliente{
+.logo_cliente {
     width: 100px;
 
 }
 
 @media only screen and (max-width:760px) {
-    .wrapper_text{
-        margin: 0 30px 0 30px ;
+    .wrapper_text {
+        margin: 0 30px 0 30px;
     }
 
-    .encabezado_services{
+    .encabezado_services {
         font-size: 0.80rem;
         text-align: justify;
         margin-bottom: 30px;
     }
 
-    .list_Servicios{
+    .list_Servicios {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap:10px;
+        gap: 10px;
         width: 80%;
-        .elemnt_list_servicio{
+
+        .elemnt_list_servicio {
             font-size: 13px;
         }
     }
 
-    .wrapper_video{
+    .wrapper_video {
         width: 100%;
         height: 250px;
     }
 
-    .title_cliente{
+    .title_cliente {
         display: flex;
-        margin:0px;
+        margin: 0px;
         padding-bottom: 50px;
         padding-top: 50px;
         justify-content: center;
         align-items: center;
     }
-    
-    .contenedor_logos{
-        display:grid;
-        grid-template-columns: repeat(2,1fr);
+
+    .contenedor_logos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: flex-end;
-        width:100vw;
+        width: 100vw;
         column-gap: 30px;
         row-gap: 18px;
         max-width: 70%;
     }
-    
-    
-    .logo_cliente{
+
+
+    .logo_cliente {
         width: 70px;
-    
+
+    }
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+    margin-bottom: 7rem;
+}
+
+#slider {
+    .wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 80%;
+        z-index: 1;
+        margin: auto;
+    }
+
+    .slides {
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 10000px;
+    }
+
+    .slides.shifting {
+        transition: left .2s ease-out;
+    }
+
+    .slide {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 1s;
+        position: relative;
+        border-radius: 2px;
+    }
+
+    .slider.loaded {}
+
+    .control {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50px;
+        margin-top: -20px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+        z-index: 2;
+    }
+
+    .prev,
+    .next {
+        background-size: 22px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .prev {
+        background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+        left: 20px;
+    }
+
+    .next {
+        background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+        right: 20px;
+    }
+
+    .prev:active,
+    .next:active {
+        transform: scale(.8);
+    }
+
+    .dots {
+        text-align: center;
+    }
+
+    .dots i {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 100%;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .dots i.active {
+        background: #ccc;
     }
 }

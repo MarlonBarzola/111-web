@@ -24,6 +24,9 @@
         <meta property="og:image:width" content="400" /> 
         <meta property="og:image:height" content="400" />
         <meta property="og:description" content="Creamos experiencias visuales, combinando el diseño, la ilustración, la publicidad, la creatividad y el mundo online, con nuestra pasión por el desarrollo y la comunicación de marcas. Nuestra forma de trabajo siempre está en búsqueda de nuevas formas narrativas y la experimentación con nuevos medios; eso nos permite crear soluciones frescas, inspiradoras y diferentes a los estándares utilizados por la gran mayoría de marcas."/>
+
+        @stack('css')
+
     </head>
     <body>
         <div>
