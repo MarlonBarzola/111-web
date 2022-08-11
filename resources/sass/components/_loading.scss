@@ -29,7 +29,7 @@
     }
 }
 
-@media only screen and (max-width:760px){
+@media only screen and (max-width:560px){
     .loading{
         .logo{
             width:40%;
@@ -37,6 +37,19 @@
 
         .we_can_do{
             width:80%;
+        }
+    }
+}
+
+@media only screen and (orientation:landscape)and (min-device-width: 560px) 
+and (max-device-width: 930px) {
+    .loading{
+        .logo{
+            width:15%;
+        }
+
+        .we_can_do{
+            width:45%;
         }
     }
 }

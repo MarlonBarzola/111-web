@@ -93,7 +93,7 @@
     width: 30px;
 }
 
-@media only screen and (max-width:760px) {
+@media only screen and (max-width:560px) {
     .container_menu{
         display: flex;
         justify-content: center;
@@ -111,6 +111,45 @@
 
     .menu_frase svg{
         width: 300px;
+    }
+
+    .icon_exit{
+        top: 50px;
+        right: 40px;
+        svg{
+            height: 25px;
+            width: 25px;
+        }
+    }
+    .icon_open svg{
+        height:25px;
+        width:25px;
+    }
+}
+
+//Responsive landscape
+@media only screen and (orientation:landscape)and (min-device-width: 560px) 
+and (max-device-width: 930px)  {
+    .container_menu{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap:29px;
+    }
+    .menu_logo svg{
+        width: 80px;
+    }
+
+    .menu_elements{
+        gap: 10px;
+    }
+
+    .element_menu{
+        font-size: 20px;
+    }
+
+    .menu_frase svg{
+        width: 280px;
     }
 
     .icon_exit{
