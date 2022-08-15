@@ -30,6 +30,7 @@
     </head>
     <body>
         <div>
+            <x-web-rotate />
             @livewire('loading')
             @livewire('menu')
             @livewire('meta-og-property')
