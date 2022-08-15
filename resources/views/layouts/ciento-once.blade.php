@@ -30,8 +30,12 @@
     </head>
     <body>
         <div>
-            <x-web-rotate />
-            @livewire('loading')
+            @if($agent->isMobile())
+                <x-web-rotate />
+            @else
+                @livewire('loading')
+            @endif
+            
             @livewire('menu')
             @livewire('meta-og-property')
             {{ $slot }}

@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use Jenssegers\Agent\Agent;
 
 class CientoOnceLayout extends Component
 {
@@ -13,6 +14,7 @@ class CientoOnceLayout extends Component
      */
     public function render()
     {
-        return view('layouts.ciento-once');
+        $agent = new Agent();
+        return view('layouts.ciento-once', compact('agent'));
     }
 }
