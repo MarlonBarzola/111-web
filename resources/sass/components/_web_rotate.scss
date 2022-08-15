@@ -1,0 +1,40 @@
+
+.wrapper_rotare{
+    display: none;
+    //background-color:rgba(238, 238, 238, 0.956);
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    z-index: 99999999;
+}
+
+@media only screen and (max-width:545px) {
+    .wrapper_rotare{
+        display:flex;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .wrapper_rotare{
+        display:none;
+    }
+}
+
+.girar_rotate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.girar_rotate img{
+    width: 60%;
+}
+
+.girar_rotate p{
+    font-size: 20px;
+}
