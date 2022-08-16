@@ -23,9 +23,9 @@
     </div>
 
     @if ($job->iframe)
-        <div class="iframes">
-            {!! $job->iframe !!}
-        </div>
+        
+        {!! $job->iframe !!}
+        
     @endif
 
 </article>
