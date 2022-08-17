@@ -195,6 +195,10 @@
         transition: all 1s;
         position: relative;
         border-radius: 2px;
+        img {
+            width: 70%;
+            margin: auto;
+        }
     }
 
     .slider.loaded {}
