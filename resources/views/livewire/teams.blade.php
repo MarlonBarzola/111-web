@@ -15,7 +15,7 @@
                     </figure>
                     <div class="data">
                         <h2>{{ $team->name }}</h2>
-                        <span>{{ $team->position }}</span>
+                        {{-- <span>{{ $team->position }}</span> --}}
                     </div>
                 </li>
             @endforeach

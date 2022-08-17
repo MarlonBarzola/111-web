@@ -18,6 +18,7 @@ class MessageMailable extends Mailable
      * @return void
      */
 
+    public $subject = 'Nuevo mensaje web';
     public $message;
 
     public function __construct(Message $message)
