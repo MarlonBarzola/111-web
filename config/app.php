@@ -167,6 +167,7 @@ return [
          */
 
         Jenssegers\Agent\AgentServiceProvider::class,
+        Biscolab\ReCaptcha\ReCaptchaServiceProvider::class, 
 
         /*
          * Application Service Providers...
@@ -234,7 +235,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
-        
+        'ReCaptcha' => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
     ],
 
 ];
