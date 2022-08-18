@@ -180,7 +180,8 @@
         position: relative;
         top: 0;
         left: 0;
-        width: 10000px;
+        //width: 10000px;
+        width: 2340px;
     }
 
     .slides.shifting {
@@ -195,10 +196,6 @@
         transition: all 1s;
         position: relative;
         border-radius: 2px;
-        img {
-            width: 70%;
-            margin: auto;
-        }
     }
 
     .slider.loaded {}
