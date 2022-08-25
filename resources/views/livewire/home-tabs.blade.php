@@ -19,9 +19,9 @@
                     <div class="svg_cerebro">
                         <img src="{{ asset("images/cerebro.svg") }}">
                     </div>
-                    <div class="texture texture_servicio">
+                    {{-- <div class="texture texture_servicio">
                         <img src="{{ asset("images/textura.png") }}">
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="full_content">
                     <div class="full">
@@ -47,9 +47,9 @@
                     <div class="svg_puntos">
                         <img src="{{ asset('images/puntos.svg') }}">
                     </div>
-                    <div class="texture texture_trabajos">
+                    {{-- <div class="texture texture_trabajos">
                         <img src="{{ asset('images/textura.png') }}">
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="full_content">
                     <div class="full">
@@ -80,9 +80,9 @@
                     <div class="svg_circulo">
                         <img src="{{ asset('images/circulo.svg') }}">
                     </div>
-                    <div class="texture texture_equipos">
+                    {{-- <div class="texture texture_equipos">
                         <img src="{{ asset('images/textura.png') }}">
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="full_content">
                     <div class="full">
