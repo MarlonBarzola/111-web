@@ -6,6 +6,10 @@
         <img src="{{ asset('images/trabajos/reel-trabajos.jpg') }}" alt="Tranajos 111">
     </div>
 
+    <p>
+        Somos un equipo sólido de trabajo conformado por 18 talentos quienes pertenecen a las diferentes áreas de especialización: Comunicación, Producción, Diseño Gráfico, Gestión de Proyectos, Ilustración digital, Publicidad y Marketing, Motion Graphics, Desarrollo Web, Soporte técnico, Cobranzas, Mensajería y Despacho.
+    </p>
+
     @if ($teams->count())
         <ul class="team">
             @foreach ($teams as $team)
