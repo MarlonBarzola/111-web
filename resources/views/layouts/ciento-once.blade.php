@@ -30,11 +30,14 @@
     </head>
     <body>
         <div>
-            @if($agent->isMobile())
+
+            @livewire('loading')
+
+            {{-- @if($agent->isMobile())
                 <x-web-rotate />
             @else
                 @livewire('loading')
-            @endif
+            @endif --}}
             
             @livewire('menu')
             @livewire('meta-og-property')
