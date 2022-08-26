@@ -44,9 +44,13 @@
     display: flex;
     justify-content: center;
     margin-top: 40px;
-    background-color: #BF2257;
+    //background-color: #BF2257;
     width: 100%;
     height: 400px;
+    margin-bottom: 8rem;
+    @include md-size {
+        margin-bottom: 6rem;
+    }
 }
 
 .wrapper_video video {
@@ -163,7 +167,7 @@
 .slider {
     width: 100%;
     position: relative;
-    margin-bottom: 7rem;
+    margin-bottom: 11rem;
 }
 
 #slider {
