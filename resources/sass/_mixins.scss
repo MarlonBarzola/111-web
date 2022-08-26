@@ -1,0 +1,60 @@
+// Media Queries
+@mixin xxl-size{
+    @media screen and (max-width: 1366px) {      // 1366px
+        @content;
+    }
+}
+
+@mixin xl-size{
+    @media screen and (max-width: 1200px) {      // 1200px
+        @content;
+    }
+}
+
+@mixin lg-size{
+    @media screen and (max-width: 1024px) {      // 1024px
+        @content;
+    }
+}
+@mixin ipad {
+    @media screen and (max-width: 810px) {      // 1024px
+        @content;
+    }
+}
+@mixin md-size{
+    @media screen and (max-width: 768px) {      // 768px
+        @content;
+    }
+}
+
+@mixin sm-size{
+    @media screen and (max-width: 480px) {      // 480px
+        @content;
+    }
+}
+
+@mixin xs-size{
+    @media screen and (max-width: 20rem) {      // 320px
+        @content;
+    }
+}
+
+// 75rem        -> 1200px   ->      xl-size
+// 64rem        -> 1024px   ->      lg-size
+// 48rem        -> 768px    ->      md-size
+// 30rem        -> 480px    ->      sm-size   
+// 20rem        -> 320px    ->      xs-size
+
+
+@mixin custom-break($value){
+    @media screen and (max-width: $value) {
+        @content;
+    }
+}
+
+@mixin chrome() {
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+    and (min-resolution:.001dpcm) {
+        @content;
+    }
+}

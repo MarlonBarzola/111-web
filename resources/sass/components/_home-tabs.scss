@@ -35,7 +35,7 @@
 .accordeon .link.hovered {
     width: 88%;
     background-color: $white;
-    background-image: url(../images/bg-load.jpg);
+    //background-image: url(../images/bg-load.jpg);
     background-size: cover;
     //transition: .5s all;
     .column_servicios {
@@ -279,16 +279,25 @@
             display: flex;
             align-items: center;
             gap: 15px;
-
+            @include ipad {
+                bottom: 90px;
+            }
             h2 {
                 transform: unset;
                 font-size: 40px;
+                @include ipad {
+                    font-size:  28px;
+                }
             }
 
             .icon {
                 height: 30px;
                 width: 30px;
                 transform: rotate(90deg);
+                @include ipad {
+                    height: 22px;
+                    width: 22px;
+                }
             }
         }
     }

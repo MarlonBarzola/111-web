@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '_mixins';
+
 @import 'vars';
 @import 'fonts';
 @import 'general';
