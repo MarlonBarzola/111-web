@@ -3,7 +3,7 @@
         @livewire('open-menu')
     </div>
     <div class="reel">
-        <img src="{{ asset('images/trabajos/reel-trabajos.jpg') }}" alt="Tranajos 111">
+        <img src="{{ asset('images/banner-equipo.png') }}" alt="Tranajos 111">
     </div>
 
     <p style="text-align: center">
