@@ -39,3 +39,9 @@ p {
 .text-danger {
     color: red;
 }
+
+.grecaptcha-badge {
+    @include ipad {
+        transform: scale(0.8);
+    }
+}

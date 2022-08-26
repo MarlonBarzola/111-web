@@ -18,23 +18,21 @@
         color: $black;
         font-family: $font_medium;
         font-size: 1.3rem;
+        @include ipad {
+            font-size: 1rem;
+        }
     }
     span {
         display: block;
+        @include ipad {
+            font-size: 0.9rem;
+        }
     }
     .data {
         padding: 0 30px;
         line-height: 1.2;
-    }
-}
-@media only screen and (max-width:760px) {
-    .team {
-        li {
-            margin-left: 0px;
-            width: 100%;
-        }
-        h2 {
-            font-size: 1rem;
+        @include ipad {
+            padding: 0;
         }
     }
 }
