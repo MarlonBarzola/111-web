@@ -1,10 +1,17 @@
 <div x-data="{ open: false }">
     <div class="wrapper_hey">
-        <button class="boton_hey" x-on:click="open = !open">
-            <x-icon-mano />
-        </button>
-        <div class="text_hey">
-            <h3>Hey!</h3>
+        <div class="hey">
+            <button class="boton_hey" x-on:click="open = !open">
+                <x-icon-mano />
+            </button>
+            <div class="text_hey">
+                <h3>Hey!</h3>
+            </div>
+        </div>
+        <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=+123456&text=Hola, ¡Nececito mas información!" target="_blank">
+                <x-icon-whatsapp />
+            </a>
         </div>
     </div>
     <div class="modal" id="modalForm" x-bind:class="open ? 'open' : ''">

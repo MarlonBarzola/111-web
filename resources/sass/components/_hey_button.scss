@@ -1,17 +1,29 @@
 /*boton hey*/
 .wrapper_hey {
     position: fixed;
-    width: 90px;
+    width: 190px;
     height: 80px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     bottom: 10px;
     align-items: center;
     left: 50%;
     transform: translateX(-50%);
-    gap: 3px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
+.hey {
+    display: flex;
+    align-items: center;
+}
+.whatsapp svg {
+    height: 55px;
+    width: 55px;
+    @include ipad {
+        height: 45px;
+        width: 45px;
+    }
+}
 
 .boton_hey {
     border: none;
@@ -335,8 +347,7 @@ input:-moz-placeholder, textarea::-webkit-input-placeholder { /* Firefox 18- */
     }
 }
 
-@media only screen and (orientation:landscape)and (min-device-width: 560px) 
-and (max-device-width: 930px)  {
+@include ipad {
     .boton_hey {
         height: 35px;
         width: 35px;
