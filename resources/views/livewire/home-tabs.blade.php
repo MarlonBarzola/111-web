@@ -55,12 +55,13 @@
             </div>
             <div class="full_content">
                 <div class="full">
-                    @if($job)
-                        @livewire('job-show', ['job' => $job])
-                    @else
-                        @livewire('jobs')
+                    @if ($pagina && $pagina == 'trabajos')
+                        @if($job)
+                            @livewire('job-show', ['job' => $job])
+                        @else
+                            @livewire('jobs')
+                        @endif
                     @endif
-                    
                 </div>
             </div>
         </div>
@@ -88,7 +89,9 @@
             </div>
             <div class="full_content">
                 <div class="full">
-                    @livewire('teams')
+                    @if ($pagina && $pagina == 'equipo')
+                        @livewire('teams')
+                    @endif
                 </div>
             </div>
         </div>
