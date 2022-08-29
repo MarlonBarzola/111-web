@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0 150px 0 150px;
 }
 
 .encabezado_services {
@@ -14,6 +13,10 @@
     text-align: center;
     margin-bottom: 35px;
     line-height: 1.8;
+    padding: 0 4vw;
+    @include lg-size {
+        padding: 0;
+    }
 }
 
 .list_Servicios {
@@ -25,7 +28,9 @@
     flex-wrap: wrap;
     width: 70%;
     margin: auto;
-
+    @include lg-size {
+        width: 100%;
+    }
     .elemnt_list_servicio {
         cursor: pointer;
         color: #000000;
@@ -95,9 +100,6 @@
 }
 
 @media only screen and (max-width:560px) {
-    .wrapper_text{
-        margin: 0 30px 0 30px ;
-    }
 
     .encabezado_services {
         font-size: 0.80rem;
@@ -110,8 +112,6 @@
         flex-direction: column;
         justify-content: center;
         gap: 10px;
-        width: 80%;
-
         .elemnt_list_servicio {
             font-size: 13px;
         }
@@ -152,10 +152,6 @@
 
 @media only screen and (orientation:landscape)and (min-device-width: 560px) 
         and (max-device-width: 930px) {
-
-            .wrapper_text{
-                margin: 0 25px 0 25px ;
-            } 
 
             .encabezado_services{
                 font-size: 0.90rem;

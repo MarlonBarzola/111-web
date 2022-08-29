@@ -2,7 +2,7 @@
     <div class="content text-right">
         @livewire('open-menu')
     </div>
-    <div class="wrapper_text">
+    <div class="wrapper_text content">
         <p class="encabezado_services">
             En un entorno de comunicación.
             la comunicación no puedes ser invasiva

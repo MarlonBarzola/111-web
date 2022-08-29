@@ -47,7 +47,7 @@
     text-align: center;
     font-size: 30px;
     font-family: $font_regular;
-    @include custom-break(920px) {
+    @include lg-size() {
         font-size: 20px;
     }
     &.active {
@@ -96,7 +96,7 @@
     width: 30px;
 }
 
-@media only screen and (max-width:560px) {
+@media(max-width:560px) {
     .container_menu{
         display: flex;
         justify-content: center;
@@ -104,7 +104,7 @@
         gap:55px
     }
 
-    .menu_logo svg{
+    .menu_logo svg{ 
         width: 100px;
     }
 
