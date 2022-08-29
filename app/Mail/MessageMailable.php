@@ -23,6 +23,7 @@ class MessageMailable extends Mailable
 
     public function __construct(Message $message)
     {
+        $this->subject = "Nuevo mensaje web - [{$message->email}]";
         $this->message = $message;
     }
 
