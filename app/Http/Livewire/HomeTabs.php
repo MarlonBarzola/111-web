@@ -98,7 +98,7 @@ class HomeTabs extends Component
 
     public function render()
     {
-        $agent = new Agent();
-        return view('livewire.home-tabs', compact('agent'));
+        //$agent = new Agent();
+        return view('livewire.home-tabs');
     }
 }

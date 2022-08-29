@@ -1,9 +1,7 @@
 <div id="reseaux_sociaux" wire:init="init" style="opacity: @if ($loadData) 1 @else 0 @endif">
 
-    @if($agent->isMobile())
-        <x-web-rotate />
-    @endif
-   
+    <x-web-rotate />
+
     <div class="accordeon">
         {{-- {{$search}} --}}
         <div class="link {{$service_active}}">
