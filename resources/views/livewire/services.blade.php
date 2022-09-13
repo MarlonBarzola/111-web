@@ -1,17 +1,15 @@
 <div class="wrapper_services">
+
+    @push('css')
+        <link rel="stylesheet" href="{{ asset('vendor/flexslider/flexslider.css') }}">
+    @endpush
+
     <div class="content text-right">
         @livewire('open-menu')
     </div>
     <div class="wrapper_text content">
         <p class="encabezado_services">
-            En un entorno de comunicación.
-            la comunicación no puedes ser invasiva
-            y apersonal, la comunicación actual más
-            allá de crear consumidores, aspira a crear
-            "fans" de las marcas, y por ende son mas
-            dieles a ellas. Creemos que existe una
-            nueva forma de hacer comunicación visual
-            y sabemos cómo hacerlo.
+            En un entorno de comunicación. la comunicación no puedes ser invasiva y apersonal, la comunicación actual más allá de crear consumidores, aspira a crear "fans" de las marcas, y por ende son mas dieles a ellas. Creemos que existe una nueva forma de hacer comunicación visual y sabemos cómo hacerlo. 
         </p>
         <ul class="list_Servicios">
             @foreach ($categories as $category)
@@ -32,18 +30,22 @@
 
     <div id="slider" class="slider">
         <div class="wrapper">
-            <div id="slides" class="slides">
+            {{-- <div id="slides" class="slides">
                 @foreach ($customers as $customer)
                     <div class="slide">
                         <img src="{{ Storage::url($customer->thumbnail) }}" alt="{{ $customer->name }}">
                     </div>
                 @endforeach
+            </div> --}}
+            <div class="flexslider">
+                <ul class="slides">
+                    @foreach ($customers as $customer)
+                        <li class="slide">
+                            <img src="{{ Storage::url($customer->thumbnail) }}" alt="{{ $customer->name }}">
+                        </li>
+                    @endforeach
+                </ul>
             </div>
-        </div>
-        <a id="prev" class="control prev"></a>
-        <a id="next" class="control next"></a>
-        <div class="dots">
-
         </div>
     </div>
 
@@ -51,7 +53,19 @@
 
 @push('js')
 
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/flexslider/jquery.flexslider-min.js') }}"></script>
+
     <script>
+         $('.flexslider').flexslider({
+            animation: "slide",
+            animationLoop: false,
+            itemWidth: 210,
+            itemMargin: 5
+        });
+    </script>
+
+    {{-- <script>
         var slider = document.getElementById('slider'),
             sliderItems = document.getElementById('slides'),
             prev = document.getElementById('prev'),
@@ -212,5 +226,5 @@
         }
 
         slide(slider, sliderItems, prev, next);
-    </script>
+    </script> --}}
 @endpush
