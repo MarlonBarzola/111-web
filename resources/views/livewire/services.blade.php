@@ -20,9 +20,7 @@
         </ul>
     </div>
     <div class="wrapper_video">
-        <video width="710" height="550" controls="Play" poster="{{ asset('images/portada.png') }}">
-            <source src="{{ asset('images/video.mp4') }}" type="video/mp4">
-        </video>
+        <iframe width="100%" height="430" src="https://www.youtube.com/embed/dRVwoReJWC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="title_cliente">
         <h2>CLIENTES</h2>
